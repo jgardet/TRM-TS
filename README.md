@@ -273,19 +273,6 @@ Inference metrics on test split - MAE: 0.068836, RMSE: 0.076009
 - Early stopping restores best model automatically
 - MAE/RMSE reported on held-out test set
 
-## FreqAI Integration
-
-For use with Freqtrade/FreqAI, see:
-- `../freqaimodels/TRMTSRegressor.py` - FreqAI prediction model with Gaussian NLL loss
-- `../strategies/TRMTSStrategy.py` - Trading strategy with comprehensive feature engineering
-- `../config_trm_ts.json` - FreqAI configuration
-
-```powershell
-# Quick start with FreqAI
-.\user_data\run_trm_ts.ps1 -Action download -Timerange "20240101-20241201"
-.\user_data\run_trm_ts.ps1 -Action backtest -Timerange "20240601-20241201"
-```
-
 ## Conclusion
 
 TRM-TS represents a synthesis of recursive efficiency and the specific analytical demands of multivariate financial time-series. By replacing brute-force parameterization with elegant iterative refinement, it offers a compelling solution for practitioners seeking both performance and resource efficiency.
@@ -297,7 +284,7 @@ TRM-TS represents a synthesis of recursive efficiency and the specific analytica
 | **Computational Efficiency** | ~60-80K parameters. Suitable for resource-constrained or latency-sensitive environments. |
 | **Deep Reasoning via Recursion** | Full Recurrent Cycling enables multi-pass reasoning, achieving depth that far exceeds physical size. |
 | **Robust Architecture** | RMSNorm + ResidualGate ensure training stability in deep recursive systems. |
-| **Financial Specialization** | Learned positional embeddings, multi-scale analysis, regime/calendar awareness, cross-asset context. |
+| **Financial Specialization** | Learned positional embeddings, multi-scale analysis, regime/calendar awareness, cross-asset context. |§
 
 TRM-TS challenges the prevailing notion that performance must scale with parameter count.
 
